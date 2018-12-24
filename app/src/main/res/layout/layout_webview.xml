@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/showDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="H5 弹窗"/>
+
+
+        <Button
+            android:id="@+id/reloadBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重新加载"/>
+
+    </LinearLayout>
+
+
+    <com.jm.android.gt.demo.webview.JMWebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll">
+    </com.jm.android.gt.demo.webview.JMWebView>
+
+</RelativeLayout>

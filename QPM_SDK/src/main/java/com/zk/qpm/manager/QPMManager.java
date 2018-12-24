@@ -16,7 +16,7 @@ public class QPMManager {
 
     private Context mContext;
 
-    private static QPMManager instance = null;
+    private static volatile QPMManager instance = null;
     private QPMGetNetworkInfoExecutor okhttpInterceptor;
 
     private QPMManager() {

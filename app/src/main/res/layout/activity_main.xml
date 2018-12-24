@@ -1,19 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingTop="15dp"
+        android:paddingRight="12dp">
 
-</android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/gt_float_view_show_btn"
+                style="@style/BtnStyle"
+                android:text="显示 GT悬浮窗"/>
+
+            <Button
+                android:id="@+id/gt_float_view_hide_btn"
+                style="@style/BtnStyle"
+                android:text="关闭 GT悬浮窗"/>
+
+            <Button
+                android:id="@+id/gt_thread_auto_add"
+                style="@style/BtnStyle"
+                android:text="JM Thread 每秒自加1"
+                android:textSize="@dimen/sp_8"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/test_network_btn"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:text="testNetwork"
+            android:textAllCaps="false"/>
+
+
+        <Button
+            android:id="@+id/test_h5"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:text="H5 页面数据监控"
+            android:textAllCaps="false"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_refresh_big_test"
+                style="@style/BtnStyle"
+                android:text="刷新BigText数据"/>
+
+            <Button
+                android:id="@+id/btn_add_big_test"
+                style="@style/BtnStyle"
+                android:text="添加BigText数据"/>
+
+            <Button
+                android:id="@+id/btn_remove_big_test"
+                style="@style/BtnStyle"
+                android:text="移除BigText数据"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_refresh_keypic"
+                style="@style/BtnStyle"
+                android:text="刷新KeyPic数据"/>
+
+            <Button
+                android:id="@+id/btn_add_keypic"
+                style="@style/BtnStyle"
+                android:text="添加KeyPic数据"/>
+
+            <Button
+                android:id="@+id/btn_remove_keypic"
+                style="@style/BtnStyle"
+                android:text="移除KeyPic数据"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_refresh_keyvalue"
+                style="@style/BtnStyle"
+                android:text="刷新KeyValue数据"/>
+
+            <Button
+                android:id="@+id/btn_add_keyvalue"
+                style="@style/BtnStyle"
+                android:text="添加KeyValue数据"/>
+
+            <Button
+                android:id="@+id/btn_remove_keyvalue"
+                style="@style/BtnStyle"
+                android:text="移除KeyValue数据"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_refresh_picvalue"
+                style="@style/BtnStyle"
+                android:text="刷新PicValue数据"/>
+
+            <Button
+                android:id="@+id/btn_add_picvalue"
+                style="@style/BtnStyle"
+                android:text="添加PicValue数据"/>
+
+            <Button
+                android:id="@+id/btn_remove_picvalue"
+                style="@style/BtnStyle"
+                android:text="移除PicValue数据"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_refresh_custom"
+                style="@style/BtnStyle"
+                android:text="刷新自定义数据"/>
+
+            <Button
+                android:id="@+id/btn_add_custom"
+                style="@style/BtnStyle"
+                android:text="添加自定义数据"/>
+
+            <Button
+                android:id="@+id/btn_remove_custom"
+                style="@style/BtnStyle"
+                android:text="移除自定义数据"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+
+
