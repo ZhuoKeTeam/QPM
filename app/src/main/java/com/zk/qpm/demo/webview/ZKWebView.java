@@ -7,16 +7,16 @@ import android.webkit.WebView;
 import com.zk.qpm.manager.QPMManager;
 
 
-public class JMWebView extends WebView {
-    public JMWebView(Context context) {
+public class ZKWebView extends WebView {
+    public ZKWebView(Context context) {
         super(context);
     }
 
-    public JMWebView(Context context, AttributeSet attrs) {
+    public ZKWebView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public JMWebView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public ZKWebView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 

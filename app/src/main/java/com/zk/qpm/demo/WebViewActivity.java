@@ -11,18 +11,18 @@ import android.widget.Button;
 
 import com.zk.qpm.demo.webview.JMJSObject;
 import com.zk.qpm.demo.webview.JMWebChromeClient;
-import com.zk.qpm.demo.webview.JMWebView;
+import com.zk.qpm.demo.webview.ZKWebView;
 import com.zk.qpm.demo.webview.JMWebViewClient;
 
 
 public class WebViewActivity extends Activity {
 
     //    private String url = "https://github.com/Blankj/AndroidUtilCode/blob/master/utilcode/README-CN.md";
-    private String url = "http://www.zkteam.cc";
-//    private String url = "http://www.gdky005.com";
+//    private String url = "http://www.zkteam.cc";
+    private String url = "http://www.gdky005.com";
 //    private String url = "http://www.baidu.com";
 
-    private JMWebView webview;
+    private ZKWebView webview;
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
@@ -59,7 +59,7 @@ public class WebViewActivity extends Activity {
             }
         });
 
-        webview = (JMWebView) findViewById(R.id.webview);
+        webview = (ZKWebView) findViewById(R.id.webview);
 
 
 
