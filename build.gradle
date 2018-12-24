@@ -1,9 +1,20 @@
+import javax.tools.JavaCompiler
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+ext {
+    compileSdkVersion = 26
+    buildToolsVersion = '27.0.3'
+    minSdkVersion = 19  // 之前是21，2018.9.29 兼容了5.0以下的手机，但我只有4.4的手机所以暂时修改为19，后续有更低的手机版本再考虑是否降低
+    targetSdkVersion = 26
+    supportLibVersion = '27.0.0'
+}
 
 buildscript {
     repositories {
-        google()
         jcenter()
+        google()
+        mavenLocal()
+        maven { url "https://jitpack.io" }
         
     }
     dependencies {
@@ -17,12 +28,18 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
         jcenter()
+        google()
+        mavenLocal()
+        maven { url "https://jitpack.io" }
         
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+tasks.withType(JavaCompiler) {
+    options.encoding = "UTF-8"
 }

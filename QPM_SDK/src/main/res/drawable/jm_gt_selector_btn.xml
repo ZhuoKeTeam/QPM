@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 顶部带圆角 白色背景 灰色边框 无下边框 长方体 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:top="40dp">
+        <shape>
+            <corners android:radius="5dp" />
+            <gradient
+                android:angle="270"
+                android:endColor="#FFF9F9F9"
+                android:startColor="#33A1A1A1" />
+        </shape>
+
+    </item>
+
+    <item android:bottom="2dp">
+        <selector>
+            <item android:state_pressed="true">
+                <shape>
+                    <corners android:radius="5dp" />
+                    <gradient
+                        android:angle="270"
+                        android:endColor="#FF0035"
+                        android:startColor="#FF0078" />
+                </shape>
+            </item>
+            <item>
+                <shape>
+                    <corners android:radius="5dp" />
+                    <solid android:color="#FFFFFF" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+
+</layer-list>

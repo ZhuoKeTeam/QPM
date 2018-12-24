@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/jm_gt_float_view_item_ll"
+    style="@style/jm_gt_float_view_ll_style"
+    tools:ignore="UseCompoundDrawables">
+
+    <ImageView
+        android:id="@+id/jm_gt_float_view_item_iv"
+        style="@style/jm_gt_float_view_image_style"
+        android:src="@drawable/jm_gt_ic_fps"
+        android:contentDescription="悬浮窗的图片"
+        tools:ignore="HardcodedText"/>
+
+    <TextView
+        android:id="@+id/jm_gt_float_view_item_name_tv"
+        style="@style/jm_gt_float_view_text_style"
+        android:layout_marginLeft="@dimen/dp_0"/>
+
+    <TextView
+        android:id="@+id/jm_gt_float_view_item_tv"
+        style="@style/jm_gt_float_view_text_style"/>
+</LinearLayout>
+
+
+
+

@@ -1,0 +1,23 @@
+<resources>
+
+    <style name="jm_gt_float_view_ll_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="jm_gt_float_view_image_style">
+        <item name="android:layout_width">@dimen/dp_10</item>
+        <item name="android:layout_height">@dimen/dp_10</item>
+    </style>
+
+    <style name="jm_gt_float_view_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/dp_5</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>
