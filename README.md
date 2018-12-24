@@ -1,6 +1,6 @@
 # QPM
 
-[![](https://www.jitpack.io/v/ZhuoKeTeam/QPM.svg)](https://www.jitpack.io/#ZhuoKeTeam/QPM)[![gdky005](https://img.shields.io/badge/%E4%BD%9C%E8%80%85-gdky005-orange.svg)](http://www.gdky005.com)[![HyperionChen](https://img.shields.io/badge/%E4%BD%9C%E8%80%85-gdky005-orange.svg)](https://www.jianshu.com/u/4730943c8fd0)
+[![](https://www.jitpack.io/v/ZhuoKeTeam/QPM.svg)](https://www.jitpack.io/#ZhuoKeTeam/QPM)   [![gdky005](https://img.shields.io/badge/%E4%BD%9C%E8%80%85-gdky005-orange.svg)](http://www.gdky005.com)   [![HyperionChen](https://img.shields.io/badge/%E4%BD%9C%E8%80%85-HyperionChen-orange.svg)](https://www.jianshu.com/u/4730943c8fd0)
 
 Quality Performance Monitor ---> QPM
 质量性能监控组件，方便查看当前 APP 的性能。
