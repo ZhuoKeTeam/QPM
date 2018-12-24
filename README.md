@@ -27,8 +27,28 @@ Quality Performance Monitor ---> QPM
 王卿， 陈晨
 
 # 项目使用方式
-1. 使用 gradle 依赖： `implementation "com.github.ZhuoKeTeam:QPM:1.0.0"`
-2. 在 Application 或者最开始的页面添加： `QPMManager.getInstance().init(this);`
+
+1. 使用 gradle 依赖：
+```
+allprojects {
+    repositories {
+        jcenter()
+        google()
+        mavenLocal()
+        maven { url 'https://www.jitpack.io' } # 添加这行
+
+    }
+}
+```
+
+
+```
+implementation "com.github.ZhuoKeTeam:QPM:1.0.0"
+```
+2. 在 Application 或者最开始的页面添加：
+```
+QPMManager.getInstance().init(this);
+```
 3. 显示悬浮窗：
 ```
 if (!QPMManager.getInstance().floatViewShow()) {
