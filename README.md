@@ -5,6 +5,8 @@
 Quality Performance Monitor ---> QPM
 质量性能监控组件，方便查看当前 APP 的性能。
 
+![screen_QPM_home_pic](https://raw.githubusercontent.com/ZhuoKeTeam/QPM/master/pic/screen_QPM_home_pic_s.png)
+
 
 # 下面做一个性能优化组件的简单介绍：
 1. 获取手机常用的基本信息，方便开发和测试快速获取手机基本信息 （是否 root, 版本号，wifi, 硬件信息等等）；
