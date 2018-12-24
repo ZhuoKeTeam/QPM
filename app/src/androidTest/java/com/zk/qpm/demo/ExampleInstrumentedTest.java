@@ -1,4 +1,4 @@
-package com.jm.qpm;
+package com.zk.qpm.demo;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.jm.qpm", appContext.getPackageName());
+        assertEquals("com.zk.qpm.demo", appContext.getPackageName());
     }
 }

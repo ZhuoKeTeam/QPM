@@ -1,4 +1,4 @@
-package com.jm.qpm;
+package com.zk.qpm.demo;
 
 import org.junit.Test;
 
