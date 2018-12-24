@@ -1,4 +1,4 @@
-package com.jm.android.gt.utils;
+package com.zk.qpm.utils;
 
 import android.content.Context;
 import android.content.res.AssetManager;

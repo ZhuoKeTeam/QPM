@@ -21,7 +21,7 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package com.jm.android.gt.utils;
+package com.zk.qpm.utils;
 
 import android.app.Activity;
 import android.content.Context;

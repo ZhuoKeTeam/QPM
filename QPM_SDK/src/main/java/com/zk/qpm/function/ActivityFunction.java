@@ -1,12 +1,12 @@
-package com.jm.android.gt.function;
+package com.zk.qpm.function;
 
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.view.View;
 import android.view.ViewStub;
 
-import com.jm.android.gt.R;
-import com.jm.android.gt.dialog.JumpActivityWithParamDialog;
+import com.zk.qpm.R;
+import com.zk.qpm.dialog.JumpActivityWithParamDialog;
 
 
 public class ActivityFunction extends FourModuleFunction {

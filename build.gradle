@@ -4,7 +4,7 @@ import javax.tools.JavaCompiler
 ext {
     compileSdkVersion = 26
     buildToolsVersion = '27.0.3'
-    minSdkVersion = 19  // 之前是21，2018.9.29 兼容了5.0以下的手机，但我只有4.4的手机所以暂时修改为19，后续有更低的手机版本再考虑是否降低
+    minSdkVersion = 19  // 之前是21，2018.9.29 兼容了5.0以下的手机，但我只有4.4的手机所以暂时修改为19，后续有更低的手机版本再考虑是否降低,
     targetSdkVersion = 26
     supportLibVersion = '27.0.0'
 }

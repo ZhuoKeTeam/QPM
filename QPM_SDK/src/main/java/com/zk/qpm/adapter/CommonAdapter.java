@@ -1,4 +1,4 @@
-package com.jm.android.gt.adapter;
+package com.zk.qpm.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;

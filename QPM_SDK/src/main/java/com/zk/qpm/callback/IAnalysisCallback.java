@@ -1,8 +1,8 @@
-package com.jm.android.gt.callback;
+package com.zk.qpm.callback;
 
 import android.support.annotation.StringDef;
 
-import com.jm.android.gt.JMGTRAnalysisResult;
+import com.zk.qpm.QPMRAnalysisResult;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -59,5 +59,5 @@ public interface IAnalysisCallback {
     String TYPE_REFRESH_SCREEN_RECORDER_STATUS_INFO = "type_refresh_screen_recorder_status_info";
     String TYPE_REFRESH_H5_MONITOR_INFO = "type_refresh_h5_monitor_info";
 
-    void refreshInfo(@CallbackType String type, JMGTRAnalysisResult analysisResult);
+    void refreshInfo(@CallbackType String type, QPMRAnalysisResult analysisResult);
 }

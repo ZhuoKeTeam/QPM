@@ -1,4 +1,4 @@
-package com.jm.android.gt.utils;
+package com.zk.qpm.utils;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -128,7 +128,7 @@ public class StatusBarImmersiveUtils {
         mStatusBarView = contentView.findViewWithTag(TAG_FAKE_STATUS_BAR_VIEW);
         if (mStatusBarView != null) {
             mStatusBarView.setBackgroundColor(colorStatusbar);
-            StatusBarColorUtils.setStatusBarDarkIcon(activity, false);
+           StatusBarColorUtils.setStatusBarDarkIcon(activity, false);
         }
     }
     /**

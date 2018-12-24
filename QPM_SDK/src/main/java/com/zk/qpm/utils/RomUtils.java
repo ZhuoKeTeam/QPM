@@ -1,4 +1,4 @@
-package com.jm.android.gt.utils;
+package com.zk.qpm.utils;
 
 import android.os.Build;
 import android.support.annotation.StringDef;

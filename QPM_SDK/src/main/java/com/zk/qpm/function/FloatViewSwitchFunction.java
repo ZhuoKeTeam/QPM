@@ -1,4 +1,4 @@
-package com.jm.android.gt.function;
+package com.zk.qpm.function;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -16,18 +16,18 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 
-import com.jm.android.gt.R;
-import com.jm.android.gt.adapter.CommonRecyclerAdapter;
-import com.jm.android.gt.callback.ICallback;
-import com.jm.android.gt.manager.JMGTSortManager;
-import com.jm.android.gt.floatview.JMFloatViewType;
-import com.jm.android.gt.floatview.JMFloatViewBean;
-import com.jm.android.gt.manager.JMFloatViewManager;
-import com.jm.android.gt.manager.JMGTManager;
-import com.jm.android.gt.manager.JMGTModeManager;
-import com.jm.android.gt.manager.JMGTSwitchManager;
-import com.jm.android.gt.manager.JMScreenRecorderManager;
-import com.jm.android.gt.utils.PrefsParser;
+import com.zk.qpm.R;
+import com.zk.qpm.adapter.CommonRecyclerAdapter;
+import com.zk.qpm.callback.ICallback;
+import com.zk.qpm.floatview.QPMFloatViewBean;
+import com.zk.qpm.floatview.QPMFloatViewType;
+import com.zk.qpm.manager.QPMFloatViewManager;
+import com.zk.qpm.manager.QPMManager;
+import com.zk.qpm.manager.QPMModeManager;
+import com.zk.qpm.manager.QPMScreenRecorderManager;
+import com.zk.qpm.manager.QPMSortManager;
+import com.zk.qpm.manager.QPMSwitchManager;
+import com.zk.qpm.utils.PrefsParser;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -46,7 +46,7 @@ public class FloatViewSwitchFunction implements IFunction {
 
     public FloatViewSwitchFunction(Context context) {
         this.mContext = context;
-        modeOperate = JMGTModeManager.getInstance().isSimpleMode() ? new SimpleModeOperate() : new CustomModeOperate();
+        modeOperate = QPMModeManager.getInstance().isSimpleMode() ? new SimpleModeOperate() : new CustomModeOperate();
     }
 
     @Override
@@ -59,11 +59,11 @@ public class FloatViewSwitchFunction implements IFunction {
     public void renderer(View layout) {
         initData();
         mModeCheckBox = layout.findViewById(R.id.cb_mode_switch);
-        mModeCheckBox.setChecked(JMGTModeManager.getInstance().isSimpleMode());
+        mModeCheckBox.setChecked(QPMModeManager.getInstance().isSimpleMode());
         mModeCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                JMGTModeManager.getInstance().writeMode(isChecked);
+                QPMModeManager.getInstance().writeMode(isChecked);
                 modeOperate = isChecked ? new SimpleModeOperate() : new CustomModeOperate();
                 modeOperate.onModeChecked();
             }
@@ -114,27 +114,27 @@ public class FloatViewSwitchFunction implements IFunction {
 
     private void initData() {
         mItems.clear();
-        List<PrefsParser.PrefItem> prefs = JMGTSwitchManager.getInstance().getSwitchs();
-        List<JMFloatViewBean> typeBeans = JMFloatViewManager.getInstance().getTypeBeans();
+        List<PrefsParser.PrefItem> prefs = QPMSwitchManager.getInstance().getSwitchs();
+        List<QPMFloatViewBean> typeBeans = QPMFloatViewManager.getInstance().getTypeBeans();
         for (PrefsParser.PrefItem pref : prefs) {
             Item item = new Item();
             item.item = pref;
-            for (JMFloatViewBean typeBean : typeBeans) {
+            for (QPMFloatViewBean typeBean : typeBeans) {
                 if (TextUtils.equals(pref.key, typeBean.type)) {
                     item.switchName = typeBean.switchName;
                     item.switchTip = typeBean.switchTip;
                 }
             }
             // 特殊处理视频录制回调
-            if (TextUtils.equals(pref.key, JMFloatViewType.TYPE_FLOAT_VIEW_SCREEN_RECORDER)) {
+            if (TextUtils.equals(pref.key, QPMFloatViewType.TYPE_FLOAT_VIEW_SCREEN_RECORDER)) {
                 item.callback = new ICallback() {
                     @Override
                     public void callback() {
-                        Context context = JMGTManager.getInstance().getContext();
+                        Context context = QPMManager.getInstance().getContext();
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP
-                                && !JMGTSwitchManager.getInstance().isSwitchOpen(context, JMFloatViewType.TYPE_FLOAT_VIEW_SCREEN_RECORDER)
-                                && JMScreenRecorderManager.getInstance().isStart()) {
-                            JMScreenRecorderManager.getInstance().stopRecorder();
+                                && !QPMSwitchManager.getInstance().isSwitchOpen(context, QPMFloatViewType.TYPE_FLOAT_VIEW_SCREEN_RECORDER)
+                                && QPMScreenRecorderManager.getInstance().isStart()) {
+                            QPMScreenRecorderManager.getInstance().stopRecorder();
                         }
                     }
                 };
@@ -149,7 +149,7 @@ public class FloatViewSwitchFunction implements IFunction {
         Collections.sort(mItems, new Comparator<Item>() {
             @Override
             public int compare(Item o1, Item o2) {
-                return JMGTSortManager.getInstance().compare(o1.item.key, o2.item.key);
+                return QPMSortManager.getInstance().compare(o1.item.key, o2.item.key);
             }
         });
     }
@@ -200,10 +200,10 @@ public class FloatViewSwitchFunction implements IFunction {
             // 重定义排序
             for (int i = 0; i < mItems.size(); i++) {
                 String type = mItems.get(i).item.key;
-                JMGTSortManager.getInstance().reSort(type, i + 1);
+                QPMSortManager.getInstance().reSort(type, i + 1);
             }
             // 刷新悬浮窗顺序
-            JMFloatViewManager.getInstance().refreshFloatViewAndComponent(true);
+            QPMFloatViewManager.getInstance().refreshFloatViewAndComponent(true);
             return true;
         }
 
@@ -242,7 +242,7 @@ public class FloatViewSwitchFunction implements IFunction {
                 mAdapter.setDatas(mItems);
             }
             // 直接显示悬浮窗，内部处理了切换逻辑
-            JMFloatViewManager.getInstance().floatViewShow();
+            QPMFloatViewManager.getInstance().floatViewShow();
         }
 
         @Override
@@ -256,8 +256,8 @@ public class FloatViewSwitchFunction implements IFunction {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     item.item.value = String.valueOf(isChecked);
-                    JMGTSwitchManager.getInstance().writeSwitch(item.item);
-                    JMFloatViewManager.getInstance().refreshFloatViewAndComponent(true);
+                    QPMSwitchManager.getInstance().writeSwitch(item.item);
+                    QPMFloatViewManager.getInstance().refreshFloatViewAndComponent(true);
                     if (item.callback != null) {
                         item.callback.callback();
                     }
@@ -276,7 +276,7 @@ public class FloatViewSwitchFunction implements IFunction {
             for (int i = 0; i < mItems.size(); i++) {
                 Item item = mItems.get(i);
                 item.item.value = String.valueOf(i < 2);
-                JMGTSwitchManager.getInstance().writeSwitch(item.item);
+                QPMSwitchManager.getInstance().writeSwitch(item.item);
                 if (item.callback != null) {
                     item.callback.callback();
                 }
@@ -285,7 +285,7 @@ public class FloatViewSwitchFunction implements IFunction {
                 mAdapter.setDatas(mItems);
             }
             // 直接显示悬浮窗，内部处理了切换逻辑
-            JMFloatViewManager.getInstance().floatViewShow();
+            QPMFloatViewManager.getInstance().floatViewShow();
         }
 
         @Override
@@ -305,7 +305,7 @@ public class FloatViewSwitchFunction implements IFunction {
                     }
                 }
                 item.item.value = String.valueOf(i < 2);
-                JMGTSwitchManager.getInstance().writeSwitch(item.item);
+                QPMSwitchManager.getInstance().writeSwitch(item.item);
                 if (item.callback != null) {
                     item.callback.callback();
                 }
@@ -313,7 +313,7 @@ public class FloatViewSwitchFunction implements IFunction {
             if (hasChanged && mAdapter != null) {
                 mAdapter.setDatas(mItems);
             }
-            JMFloatViewManager.getInstance().refreshFloatViewAndComponent(true);
+            QPMFloatViewManager.getInstance().refreshFloatViewAndComponent(true);
         }
 
         @Override

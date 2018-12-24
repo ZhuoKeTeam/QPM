@@ -1,4 +1,5 @@
-package com.jm.android.gt.function;
+package com.zk.qpm.function;
+
 
 import android.content.Context;
 import android.graphics.Color;
@@ -9,9 +10,9 @@ import android.view.View;
 import android.view.ViewStub;
 import android.widget.TextView;
 
-import com.jm.android.gt.R;
-import com.jm.android.gt.adapter.CommonRecyclerAdapter;
-import com.jm.android.gt.utils.BasicInfoUtils;
+import com.zk.qpm.R;
+import com.zk.qpm.adapter.CommonRecyclerAdapter;
+import com.zk.qpm.utils.BasicInfoUtils;
 
 import java.util.ArrayList;
 import java.util.List;

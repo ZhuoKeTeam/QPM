@@ -1,4 +1,4 @@
-package com.jm.android.gt.dialog;
+package com.zk.qpm.dialog;
 
 import android.app.DialogFragment;
 import android.app.FragmentManager;
@@ -25,9 +25,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.jm.android.gt.R;
-import com.jm.android.gt.adapter.CommonRecyclerAdapter;
-import com.jm.android.gt.utils.PopupWindowMenus;
+import com.zk.qpm.R;
+import com.zk.qpm.adapter.CommonRecyclerAdapter;
+import com.zk.qpm.utils.PopupWindowMenus;
 
 import java.util.ArrayList;
 import java.util.List;

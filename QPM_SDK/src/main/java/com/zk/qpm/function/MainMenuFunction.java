@@ -1,17 +1,17 @@
-package com.jm.android.gt.function;
+package com.zk.qpm.function;
 
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import android.view.ViewStub;
 
-import com.jm.android.gt.R;
-import com.jm.android.gt.activity.GTBasicInfoActivity;
-import com.jm.android.gt.activity.GTManifestInfoActivity;
-import com.jm.android.gt.activity.GTNetworkAPIActivity;
-import com.jm.android.gt.activity.GTPrefInfoActivity;
-import com.jm.android.gt.activity.GTSwitchActivity;
-import com.jm.android.gt.manager.JMFloatViewManager;
+import com.zk.qpm.R;
+import com.zk.qpm.activity.QPMBasicInfoActivity;
+import com.zk.qpm.activity.QPMManifestInfoActivity;
+import com.zk.qpm.activity.QPMNetworkAPIActivity;
+import com.zk.qpm.activity.QPMPrefInfoActivity;
+import com.zk.qpm.activity.QPMSwitchActivity;
+import com.zk.qpm.manager.QPMFloatViewManager;
 
 
 public class MainMenuFunction implements IFunction {
@@ -32,10 +32,10 @@ public class MainMenuFunction implements IFunction {
         layout.findViewById(R.id.btn_switch_floatview).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (JMFloatViewManager.getInstance().isFloatViewShow()) {
-                    JMFloatViewManager.getInstance().floatViewHide();
+                if (QPMFloatViewManager.getInstance().isFloatViewShow()) {
+                    QPMFloatViewManager.getInstance().floatViewHide();
                 } else {
-                    JMFloatViewManager.getInstance().floatViewShow();
+                    QPMFloatViewManager.getInstance().floatViewShow();
                 }
             }
         });
@@ -43,35 +43,35 @@ public class MainMenuFunction implements IFunction {
         layout.findViewById(R.id.btn_phone_basic_info).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mContext.startActivity(new Intent(mContext, GTBasicInfoActivity.class));
+                mContext.startActivity(new Intent(mContext, QPMBasicInfoActivity.class));
             }
         });
 
         layout.findViewById(R.id.btn_manifest).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mContext.startActivity(new Intent(mContext, GTManifestInfoActivity.class));
+                mContext.startActivity(new Intent(mContext, QPMManifestInfoActivity.class));
             }
         });
 
         layout.findViewById(R.id.btn_pref_info).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mContext.startActivity(new Intent(mContext, GTPrefInfoActivity.class));
+                mContext.startActivity(new Intent(mContext, QPMPrefInfoActivity.class));
             }
         });
 
         layout.findViewById(R.id.btn_switch).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mContext.startActivity(new Intent(mContext, GTSwitchActivity.class));
+                mContext.startActivity(new Intent(mContext, QPMSwitchActivity.class));
             }
         });
 
         layout.findViewById(R.id.btn_network_api).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mContext.startActivity(new Intent(mContext, GTNetworkAPIActivity.class));
+                mContext.startActivity(new Intent(mContext, QPMNetworkAPIActivity.class));
             }
         });
     }

@@ -1,4 +1,4 @@
-package com.jm.android.gt.function;
+package com.zk.qpm.function;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -16,11 +16,11 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.jm.android.gt.R;
-import com.jm.android.gt.adapter.CommonRecyclerAdapter;
-import com.jm.android.gt.utils.ManifestParser;
-import com.jm.android.gt.utils.XMLParser;
-import com.jm.android.gt.utils.FuzzyMatchUtil;
+import com.zk.qpm.R;
+import com.zk.qpm.adapter.CommonRecyclerAdapter;
+import com.zk.qpm.utils.FuzzyMatchUtil;
+import com.zk.qpm.utils.ManifestParser;
+import com.zk.qpm.utils.XMLParser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +49,7 @@ public abstract class FourModuleFunction implements IFunction {
         List<Item> datas = filter(null);
         adapter = new CommonRecyclerAdapter<Item>(mContext, recyclerView, datas, R.layout.jm_gt_item_four_module) {
             @Override
-            protected void onBind(CommonViewHolder viewHolder, final View itemView, final int position, int viewType, final Item data) {
+            protected void onBind(CommonRecyclerAdapter.CommonViewHolder viewHolder, final View itemView, final int position, int viewType, final Item data) {
                 rendererModuleName(itemView, data);
                 rendererIntentFilter(itemView, data);
                 itemView.setOnClickListener(new View.OnClickListener() {

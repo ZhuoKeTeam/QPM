@@ -1,4 +1,4 @@
-package com.jm.android.gt.utils;
+package com.zk.qpm.utils;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -12,6 +12,7 @@ import android.os.Process;
 import android.os.SystemClock;
 import android.text.TextUtils;
 import android.util.Log;
+
 
 import java.util.ArrayList;
 import java.util.List;

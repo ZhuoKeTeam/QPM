@@ -48,75 +48,75 @@
     <application>
         <!--<activity android:taskAffinity="com.jm.jmgt" android:process=":jmGT"-->
         <activity
-            android:name=".activity.GTMainMenuActivity"
+            android:name=".activity.QPMMainMenuActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
 
         <!--<activity android:taskAffinity="com.jm.jmgt" android:process=":jmGT"-->
         <activity
-            android:name=".activity.GTActivityListActivity"
+            android:name=".activity.QPMActivityListActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
 
         <!--<activity android:taskAffinity="com.jm.jmgt" android:process=":jmGT"-->
         <activity
-            android:name=".activity.GTServiceListActivity"
+            android:name=".activity.QPMServiceListActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
 
         <!--<activity android:taskAffinity="com.jm.jmgt" android:process=":jmGT"-->
         <activity
-            android:name=".activity.GTReceiverListActivity"
+            android:name=".activity.QPMReceiverListActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
 
         <!--<activity android:taskAffinity="com.jm.jmgt" android:process=":jmGT"-->
         <activity
-            android:name=".activity.GTProviderListActivity"
+            android:name=".activity.QPMProviderListActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
 
         <!--<activity android:taskAffinity="com.jm.jmgt" android:process=":jmGT"-->
         <activity
-            android:name=".activity.GTManifestInfoActivity"
+            android:name=".activity.QPMManifestInfoActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
 
         <!--<activity android:taskAffinity="com.jm.jmgt" android:process=":jmGT"-->
         <activity
-            android:name=".activity.GTBasicInfoActivity"
+            android:name=".activity.QPMBasicInfoActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
 
         <!--<activity android:taskAffinity="com.jm.jmgt" android:process=":jmGT"-->
         <activity
-            android:name=".activity.GTPrefInfoActivity"
+            android:name=".activity.QPMPrefInfoActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
 
         <!--<activity android:taskAffinity="com.jm.jmgt" android:process=":jmGT"-->
         <activity
-            android:name=".activity.GTSwitchActivity"
+            android:name=".activity.QPMSwitchActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
 
         <!--<activity android:taskAffinity="com.jm.jmgt" android:process=":jmGT"-->
         <activity
-            android:name=".activity.GTNetworkAPIActivity"
+            android:name=".activity.QPMNetworkAPIActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
 
-        <activity android:name=".activity.GTScreenRecorderActivity"/>
+        <activity android:name=".activity.QPMScreenRecorderActivity"/>
 
-        <service android:name=".plugin.JMPluginService"/>
+        <service android:name=".plugin.QPMPluginService"/>
     </application>
 </manifest>

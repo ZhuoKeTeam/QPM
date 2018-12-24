@@ -1,4 +1,4 @@
-package com.jm.android.gt.callback;
+package com.zk.qpm.callback;
 
 public interface ICallback {
 

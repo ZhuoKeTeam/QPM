@@ -1,4 +1,4 @@
-package com.jm.android.gt.utils;
+package com.zk.qpm.utils;
 
 import android.app.Activity;
 import android.content.Context;

@@ -1,10 +1,10 @@
-package com.jm.android.gt.function;
+package com.zk.qpm.function;
 
 import android.app.Activity;
 import android.view.View;
 import android.view.ViewStub;
 
-import com.jm.android.gt.R;
+import com.zk.qpm.R;
 
 
 public class ReceiverFunction extends FourModuleFunction {

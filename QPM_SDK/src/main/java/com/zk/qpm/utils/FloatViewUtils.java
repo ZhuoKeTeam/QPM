@@ -1,4 +1,4 @@
-package com.jm.android.gt.utils;
+package com.zk.qpm.utils;
 
 import android.app.AppOpsManager;
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.provider.Settings;
 import android.support.annotation.RequiresApi;
 import android.widget.Toast;
 
-import com.jm.android.gt.manager.JMGTManager;
+import com.zk.qpm.manager.QPMManager;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -48,7 +48,7 @@ public class FloatViewUtils {
      */
     public static boolean checkFloatWindowPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            return Settings.canDrawOverlays(JMGTManager.getInstance().getContext());
+            return Settings.canDrawOverlays(QPMManager.getInstance().getContext());
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             //AppOpsManager添加于API 19
             return checkOps();
@@ -61,7 +61,7 @@ public class FloatViewUtils {
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private static boolean checkOps() {
         try {
-            Context context = JMGTManager.getInstance().getContext();
+            Context context = QPMManager.getInstance().getContext();
             Object object = context.getSystemService(Context.APP_OPS_SERVICE);
             if (object == null) {
                 return false;

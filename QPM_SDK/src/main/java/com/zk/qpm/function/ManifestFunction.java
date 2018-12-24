@@ -1,4 +1,4 @@
-package com.jm.android.gt.function;
+package com.zk.qpm.function;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,14 +11,14 @@ import android.view.ViewStub;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.jm.android.gt.R;
-import com.jm.android.gt.activity.GTActivityListActivity;
-import com.jm.android.gt.activity.GTProviderListActivity;
-import com.jm.android.gt.activity.GTReceiverListActivity;
-import com.jm.android.gt.activity.GTServiceListActivity;
-import com.jm.android.gt.adapter.CommonRecyclerAdapter;
-import com.jm.android.gt.utils.ManifestParser;
-import com.jm.android.gt.utils.XMLParser;
+import com.zk.qpm.R;
+import com.zk.qpm.activity.QPMActivityListActivity;
+import com.zk.qpm.activity.QPMProviderListActivity;
+import com.zk.qpm.activity.QPMReceiverListActivity;
+import com.zk.qpm.activity.QPMServiceListActivity;
+import com.zk.qpm.adapter.CommonRecyclerAdapter;
+import com.zk.qpm.utils.ManifestParser;
+import com.zk.qpm.utils.XMLParser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -181,13 +181,13 @@ public class ManifestFunction implements IFunction {
         mItems.add(jumpTitle);
         XMLParser application = applications.get(0);
         // 添加Activity
-        addFourModuleItem(application, "activity", R.string.jm_gt_register_activity, GTActivityListActivity.class);
+        addFourModuleItem(application, "activity", R.string.jm_gt_register_activity, QPMActivityListActivity.class);
         // 添加service
-        addFourModuleItem(application, "service", R.string.jm_gt_register_service, GTServiceListActivity.class);
+        addFourModuleItem(application, "service", R.string.jm_gt_register_service, QPMServiceListActivity.class);
         // 添加Receiver
-        addFourModuleItem(application, "receiver", R.string.jm_gt_register_receiver, GTReceiverListActivity.class);
+        addFourModuleItem(application, "receiver", R.string.jm_gt_register_receiver, QPMReceiverListActivity.class);
         // 添加Provider
-        addFourModuleItem(application, "provider", R.string.jm_gt_register_provider, GTProviderListActivity.class);
+        addFourModuleItem(application, "provider", R.string.jm_gt_register_provider, QPMProviderListActivity.class);
     }
 
     private void addFourModuleItem(XMLParser application, String moduleName, int strId, Class activityClazz) {

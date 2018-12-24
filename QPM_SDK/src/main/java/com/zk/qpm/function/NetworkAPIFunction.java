@@ -1,4 +1,4 @@
-package com.jm.android.gt.function;
+package com.zk.qpm.function;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -11,11 +11,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.jm.android.gt.JMGTRAnalysisResult;
-import com.jm.android.gt.R;
-import com.jm.android.gt.adapter.CommonRecyclerAdapter;
-import com.jm.android.gt.manager.JMGTRAnalysisManager;
-import com.jm.android.gt.utils.DecimalFormatUtil;
+import com.zk.qpm.QPMRAnalysisResult;
+import com.zk.qpm.R;
+import com.zk.qpm.adapter.CommonRecyclerAdapter;
+import com.zk.qpm.manager.QPMRAnalysisManager;
+import com.zk.qpm.utils.DecimalFormatUtil;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -104,9 +104,9 @@ public class NetworkAPIFunction implements IFunction {
     private void initData() {
         mItems.clear();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
-        synchronized (JMGTRAnalysisResult.SYNCHRONIZED_NETWORKINFO) {
-            JMGTRAnalysisResult analysisResult = JMGTRAnalysisManager.getInstance().getJMGTRAnalysisResult();
-            for (JMGTRAnalysisResult.NetworkInfo networkInfo : analysisResult.networkInfos) {
+        synchronized (QPMRAnalysisResult.SYNCHRONIZED_NETWORKINFO) {
+            QPMRAnalysisResult analysisResult = QPMRAnalysisManager.getInstance().getJMGTRAnalysisResult();
+            for (QPMRAnalysisResult.NetworkInfo networkInfo : analysisResult.networkInfos) {
                 Item item = new Item();
                 item.networkInfo = networkInfo;
                 item.time = format.format(new Date(networkInfo.currentTime));
@@ -127,7 +127,7 @@ public class NetworkAPIFunction implements IFunction {
 
     public class Item {
 
-        public JMGTRAnalysisResult.NetworkInfo networkInfo;
+        public QPMRAnalysisResult.NetworkInfo networkInfo;
         public boolean isFold = true;
         public String time;
         public String path;

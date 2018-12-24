@@ -1,10 +1,10 @@
-package com.jm.android.gt.floatview.renderer;
+package com.zk.qpm.floatview.renderer;
 
 import android.view.LayoutInflater;
 import android.view.View;
 
-import com.jm.android.gt.manager.JMGTManager;
-import com.jm.android.gt.manager.JMGTSwitchManager;
+import com.zk.qpm.manager.QPMManager;
+import com.zk.qpm.manager.QPMSwitchManager;
 
 public abstract class BaseRenderer implements IFloatViewRenderer {
 
@@ -12,13 +12,13 @@ public abstract class BaseRenderer implements IFloatViewRenderer {
 
     @Override
     public boolean isShow() {
-        return JMGTSwitchManager.getInstance().isSwitchOpen(JMGTManager.getInstance().getContext(), type());
+        return QPMSwitchManager.getInstance().isSwitchOpen(QPMManager.getInstance().getContext(), type());
     }
 
     @Override
     public View getView() {
         if (mView == null) {
-            LayoutInflater inflater = LayoutInflater.from(JMGTManager.getInstance().getContext());
+            LayoutInflater inflater = LayoutInflater.from(QPMManager.getInstance().getContext());
             mView = inflater.inflate(getLayoutId(), null, false);
         }
         return mView;
