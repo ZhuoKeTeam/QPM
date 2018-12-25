@@ -14,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.zk.qpm.floatview.renderer.QPMTemplateCustomRenderer;
-import com.zk.qpm.manager.QPMFloatViewManager;
 import com.zk.qpm.manager.QPMManager;
 import com.zk.qpm.manager.QPMRAnalysisManager;
 import com.zk.qpm.utils.PermissionTool;
@@ -96,12 +95,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // TODO: 2018/12/24  等待添加
                 break;
             case R.id.gt_float_view_hide_btn:
-                QPMFloatViewManager.getInstance().floatViewHide();
+                QPMManager.getInstance().floatViewHide();
                 break;
             case R.id.gt_float_view_show_btn:
-                if (!QPMFloatViewManager.getInstance().floatViewShow()) {
-                    Toast.makeText(mContext, "请开启悬浮窗权限", Toast.LENGTH_SHORT).show();
-                }
+//                if (!QPMManager.getInstance().floatViewShow()) {
+//                    Toast.makeText(mContext, "请开启悬浮窗权限", Toast.LENGTH_SHORT).show();
+//                }
                 break;
             case R.id.gt_thread_auto_add:
                 /*count++;

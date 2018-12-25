@@ -50,8 +50,8 @@ public class QPMManager {
     }
 
 
-    public void floatViewShow() {
-        QPMFloatViewManager.getInstance().floatViewShow();
+    public boolean floatViewShow() {
+        return QPMFloatViewManager.getInstance().floatViewShow();
     }
 
     public void floatViewHide() {
