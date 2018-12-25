@@ -49,6 +49,15 @@ public class QPMManager {
         return mContext;
     }
 
+
+    public void floatViewShow() {
+        QPMFloatViewManager.getInstance().floatViewShow();
+    }
+
+    public void floatViewHide() {
+        QPMFloatViewManager.getInstance().floatViewHide();
+    }
+
     public boolean isImplementOkHttp() {
         try {
             Class clazz = Class.forName("okhttp3.Interceptor");
