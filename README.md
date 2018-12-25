@@ -25,8 +25,10 @@ Quality Performance Monitor ---> QPM
 2. 默认内置五种自定义数据展示（轻松实时监控 App 相关变化数据）；
 3. 屏幕录制。
 
-# 本项目开发人员
-王卿， 陈晨
+# 本项目开发人员 （期待会有更多贡献者）
+
+- [孤独狂饮](https://www.gdky005.com)
+- [HyperionChen](https://www.jianshu.com/u/4730943c8fd0)
 
 # 项目使用方式
 
@@ -64,3 +66,7 @@ QPMManager.getInstance().floatViewHide();
 
 5. WebView 的 H5 需要单独设置。
 6. 本组件最好在 debug 模式下开启, 正式版本也可以带上，但是需要设置一个彩蛋开关，打开开关后方可使用。
+
+
+# 备注
+本开源项目于2018年12月24日（平安夜）发布，文档等资料待进一步添加，莫着急。如果有好的想法或者建议直接 issue，或者直接加WX：gdky005。
