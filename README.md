@@ -7,6 +7,10 @@ Quality Performance Monitor ---> QPM
 
 ![screen_QPM_home_pic](https://raw.githubusercontent.com/ZhuoKeTeam/QPM/master/pic/screen_QPM_home_pic_s.png)
 
+# Demo 下载地址：
+[QPM Demo](https://raw.githubusercontent.com/ZhuoKeTeam/QPM/master/release/qpm_release_v100.apk
+): https://raw.githubusercontent.com/ZhuoKeTeam/QPM/master/release/qpm_release_v100.apk
+
 
 # 下面做一个性能优化组件的简单介绍：
 1. 获取手机常用的基本信息，方便开发和测试快速获取手机基本信息 （是否 root, 版本号，wifi, 硬件信息等等）；
