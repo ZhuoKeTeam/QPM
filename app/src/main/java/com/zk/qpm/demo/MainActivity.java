@@ -98,9 +98,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 QPMManager.getInstance().floatViewHide();
                 break;
             case R.id.gt_float_view_show_btn:
-//                if (!QPMManager.getInstance().floatViewShow()) {
-//                    Toast.makeText(mContext, "请开启悬浮窗权限", Toast.LENGTH_SHORT).show();
-//                }
+                if (!QPMManager.getInstance().floatViewShow()) {
+                    Toast.makeText(mContext, "请开启悬浮窗权限", Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.gt_thread_auto_add:
                 /*count++;
