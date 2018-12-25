@@ -51,7 +51,7 @@ allprojects {
 
 
 ```
-implementation "com.github.ZhuoKeTeam:QPM:1.0.0"
+implementation "com.github.ZhuoKeTeam:QPM:1.0.2"
 ```
 2. 在 Application 或者最开始的页面添加：
 ```
