@@ -52,11 +52,6 @@ public class QPMGetThreadCountExecutor implements IExecutor {
     }
 
     @Override
-    public void reset() {
-
-    }
-
-    @Override
     public void stop() {
 
     }

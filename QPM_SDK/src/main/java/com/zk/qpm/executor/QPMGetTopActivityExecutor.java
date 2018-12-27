@@ -44,11 +44,6 @@ public class QPMGetTopActivityExecutor implements IExecutor {
     }
 
     @Override
-    public void reset() {
-
-    }
-
-    @Override
     public void stop() {
 
     }

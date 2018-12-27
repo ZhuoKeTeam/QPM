@@ -47,11 +47,6 @@ public class QPMGetActivityStackExecutor implements IExecutor {
     }
 
     @Override
-    public void reset() {
-
-    }
-
-    @Override
     public void stop() {
 
     }

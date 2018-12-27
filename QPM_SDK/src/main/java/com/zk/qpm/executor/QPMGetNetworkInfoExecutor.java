@@ -53,7 +53,6 @@ public class QPMGetNetworkInfoExecutor implements IExecutor, Interceptor {
         //因为网络接口获取是被动的，所以不在这儿处理
     }
 
-    @Override
     public void reset() {
         isStop = false;
     }

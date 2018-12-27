@@ -49,11 +49,6 @@ public class QPMGetFlowInfoExecutor implements IExecutor {
     }
 
     @Override
-    public void reset() {
-
-    }
-
-    @Override
     public void stop() {
 
     }

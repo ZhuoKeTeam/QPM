@@ -95,11 +95,6 @@ public class QPMGetCPUInfoExecutor implements IExecutor {
         }
     }
 
-    @Override
-    public void reset() {
-        isStop = false;
-    }
-
     private int getCPUIndex(String line) {
         if (line.contains("CPU")) {
             String[] titles = line.split("\\s+");

@@ -15,8 +15,6 @@ public interface IExecutor {
 
     void exec() throws QPMException;
 
-    void reset();
-
     void stop();
 
 }

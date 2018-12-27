@@ -2,8 +2,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'maven'
 
 def ARTIFACT_ID = 'qpm'
-def VERSION_NAME = '1.0.3'
-def VERSION_CODE = 103
+def VERSION_NAME = '1.0.4'
+def VERSION_CODE = 104
 def GROUP_ID = 'com.zk.qpm'
 
 android {

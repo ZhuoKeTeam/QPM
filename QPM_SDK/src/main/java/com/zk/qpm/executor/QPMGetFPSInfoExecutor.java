@@ -43,11 +43,6 @@ public class QPMGetFPSInfoExecutor implements IExecutor {
     }
 
     @Override
-    public void reset() {
-        isStop = false;
-    }
-
-    @Override
     public void stop() {
         isStop = true;
     }
