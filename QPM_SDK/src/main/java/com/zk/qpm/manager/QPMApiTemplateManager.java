@@ -97,32 +97,12 @@ public class QPMApiTemplateManager {
         addTemplateRenderer(identity, param, new QPMTemplateKeyPicRenderer(param));
     }
 
-    public void addKeyPicRenderer(String identity, String key, String picUrl) {
-        if (TextUtils.isEmpty(identity) || TextUtils.isEmpty(key) || TextUtils.isEmpty(picUrl)) {
-            return;
-        }
-        Map<String, Object> param = new HashMap<>();
-        param.put(QPMTemplateKeyPicRenderer.PARAM_KEY, key);
-        param.put(QPMTemplateKeyPicRenderer.PARAM_PIC_URL, picUrl);
-        addTemplateRenderer(identity, param, new QPMTemplateKeyPicRenderer(param));
-    }
-
     public void addPicValueRenderer(String identity, int picId, String value) {
         if (TextUtils.isEmpty(identity) || TextUtils.isEmpty(value)) {
             return;
         }
         Map<String, Object> param = new HashMap<>();
         param.put(QPMTemplatePicValueRenderer.PARAM_PIC_ID, picId);
-        param.put(QPMTemplatePicValueRenderer.PARAM_VALUE, value);
-        addTemplateRenderer(identity, param, new QPMTemplatePicValueRenderer(param));
-    }
-
-    public void addPicValueRenderer(String identity, String picUrl, String value) {
-        if (TextUtils.isEmpty(identity) || TextUtils.isEmpty(picUrl) || TextUtils.isEmpty(value)) {
-            return;
-        }
-        Map<String, Object> param = new HashMap<>();
-        param.put(QPMTemplatePicValueRenderer.PARAM_PIC_URL, picUrl);
         param.put(QPMTemplatePicValueRenderer.PARAM_VALUE, value);
         addTemplateRenderer(identity, param, new QPMTemplatePicValueRenderer(param));
     }

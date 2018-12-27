@@ -92,16 +92,8 @@ public class QPMManager {
         QPMApiTemplateManager.getInstance().addKeyPicRenderer(identity, key, picId);
     }
 
-    private void showKeyPic(String identity, String key, String picUrl) {
-        QPMApiTemplateManager.getInstance().addKeyPicRenderer(identity, key, picUrl);
-    }
-
     public void showPicValue(String identity, int picId, String value) {
         QPMApiTemplateManager.getInstance().addPicValueRenderer(identity, picId, value);
-    }
-
-    private void showPicValue(String identity, String picUrl, String value) {
-        QPMApiTemplateManager.getInstance().addPicValueRenderer(identity, picUrl, value);
     }
 
     public void showCustom(String identity, QPMTemplateCustomRenderer renderer) {

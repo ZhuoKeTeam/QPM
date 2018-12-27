@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="3">
+            android:weightSum="2">
 
             <Button
                 android:id="@+id/gt_float_view_show_btn"
@@ -28,12 +28,6 @@
                 android:id="@+id/gt_float_view_hide_btn"
                 style="@style/BtnStyle"
                 android:text="关闭 GT悬浮窗"/>
-
-            <Button
-                android:id="@+id/gt_thread_auto_add"
-                style="@style/BtnStyle"
-                android:text="JM Thread 每秒自加1"
-                android:textSize="@dimen/sp_8"/>
         </LinearLayout>
 
         <Button

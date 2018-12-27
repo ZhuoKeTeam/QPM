@@ -30,6 +30,7 @@ dependencies {
     implementation "com.blankj:utilcode:1.22.1"
 
     implementation "com.github.ZhuoKeTeam:QPM:1.0.2"
+    implementation "com.squareup.okhttp3:okhttp:3.12.0"
 //    implementation project(':QPM_SDK')
 
 

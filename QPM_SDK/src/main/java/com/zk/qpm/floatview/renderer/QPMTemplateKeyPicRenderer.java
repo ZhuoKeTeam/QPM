@@ -15,7 +15,6 @@ public class QPMTemplateKeyPicRenderer extends BaseTemplateRenderer {
 
     public static final String PARAM_KEY = "param_key";
     public static final String PARAM_PIC_ID = "param_pic_id";
-    public static final String PARAM_PIC_URL = "param_pic_url";
 
     public QPMTemplateKeyPicRenderer(Map<String, Object> mParam) {
         super(mParam);
@@ -38,9 +37,6 @@ public class QPMTemplateKeyPicRenderer extends BaseTemplateRenderer {
 
         Object key = mParam.get(PARAM_KEY);
         Object picId = mParam.get(PARAM_PIC_ID);
-        Object picUrl = mParam.get(PARAM_PIC_URL);
-
-        // TODO: 2018/12/20 Pic 使用本地图片资源，暂时去除使用网络资源
 
         if (key != null) {
             keyView.setText(key.toString());
@@ -48,8 +44,5 @@ public class QPMTemplateKeyPicRenderer extends BaseTemplateRenderer {
         if (picId != null && picId instanceof Integer) {
             ImageLoadUtil.load(QPMManager.getInstance().getContext(), valueView, (Integer) picId);
         }
-//        if (picUrl != null) {
-//            ImageLoadUtil.load(QPMManager.getInstance().getContext(), valueView, picUrl.toString());
-//        }
     }
 }

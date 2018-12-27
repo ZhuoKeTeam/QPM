@@ -9,6 +9,7 @@ import android.os.Process;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -18,11 +19,20 @@ import com.zk.qpm.manager.QPMManager;
 import com.zk.qpm.manager.QPMRAnalysisManager;
 import com.zk.qpm.utils.PermissionTool;
 
+import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
-// TODO: 2018/12/24 等待添加 网络测试。
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Interceptor;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private static final String TAG = "QPM";
     protected Context mContext;
 
     public static boolean threadFlag = true;
@@ -63,7 +73,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.test_network_btn).setOnClickListener(this);
         findViewById(R.id.gt_float_view_hide_btn).setOnClickListener(this);
         findViewById(R.id.gt_float_view_show_btn).setOnClickListener(this);
-        findViewById(R.id.gt_thread_auto_add).setOnClickListener(this);
         findViewById(R.id.test_h5).setOnClickListener(this);
         findViewById(R.id.btn_refresh_big_test).setOnClickListener(this);
         findViewById(R.id.btn_add_big_test).setOnClickListener(this);
@@ -84,15 +93,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     protected void initData() {
         PermissionTool.applyPermissions(permissions, MainActivity.this);
-        // TODO: 2018/11/1 必须先初始化这个
-        QPMRAnalysisManager.getInstance().start(this, Process.myPid(), getPackageName());
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.test_network_btn:
-                // TODO: 2018/12/24  等待添加
+                testOKHTTP();
                 break;
             case R.id.gt_float_view_hide_btn:
                 QPMManager.getInstance().floatViewHide();
@@ -101,15 +108,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (!QPMManager.getInstance().floatViewShow()) {
                     Toast.makeText(mContext, "请开启悬浮窗权限", Toast.LENGTH_SHORT).show();
                 }
-                break;
-            case R.id.gt_thread_auto_add:
-                /*count++;
-
-                if (count % 2 == 0) {
-                    JMPluginManager.getInstance().getPluginControler().startService(JMTestComponent.getInstance());
-                } else {
-                    JMPluginManager.getInstance().getPluginControler().stopService(JMTestComponent.getInstance());
-                }*/
                 break;
 
             case R.id.test_h5:
@@ -136,12 +134,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_refresh_keypic:
                 QPMManager.getInstance().showKeyPic("MainActivityKeyPic", "KEY", R.drawable.jm_gt_ic_fps);
-//                JMGTManager.getInstance().showKeyPic("MainActivityKeyPic", "KEY", "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png");
                 break;
 
             case R.id.btn_add_keypic:
                 QPMManager.getInstance().showKeyPic("MainActivityKeyPic" + count, "KEY", R.drawable.jm_gt_ic_fps);
-//                JMGTManager.getInstance().showKeyPic("MainActivityKeyPic" + count, "KEY", "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png");
                 count++;
                 break;
 
@@ -164,12 +160,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_refresh_picvalue:
                 QPMManager.getInstance().showPicValue("MainActivityPicValue", R.drawable.jm_gt_ic_fps, "VALUE");
-//                JMGTManager.getInstance().showPicValue("MainActivityPicValue", "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png", "VALUE");
                 break;
 
             case R.id.btn_add_picvalue:
                 QPMManager.getInstance().showPicValue("MainActivityPicValue" + count, R.drawable.jm_gt_ic_fps, "VALUE");
-//                JMGTManager.getInstance().showPicValue("MainActivityPicValue" + count, "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png", "VALUE");
                 count++;
                 break;
 
@@ -237,6 +231,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
+    private void testOKHTTP() {
+        String url = "http://suggest.taobao.com/sug?code=utf-8&q=车载";
+        OkHttpClient okHttpClient = new OkHttpClient.Builder().
+                addInterceptor(QPMManager.getInstance().getOkHttpInterceptor())
+                .build();
+        final Request request = new Request.Builder()
+                .url(url)
+                .get()//默认就是GET请求，可以不写
+                .build();
+        Call call = okHttpClient.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                Log.d(TAG, "onFailure: " + (e == null ? "" : e.getMessage()));
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response != null && response.body() != null) {
+                    Log.d(TAG, "onResponse: " + response.body().string());
+                }
+            }
+        });
     }
 
 }

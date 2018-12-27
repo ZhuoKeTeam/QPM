@@ -14,7 +14,6 @@ import java.util.Map;
 public class QPMTemplatePicValueRenderer extends BaseTemplateRenderer {
 
     public static final String PARAM_PIC_ID = "param_pic_id";
-    public static final String PARAM_PIC_URL = "param_pic_url";
     public static final String PARAM_VALUE = "param_value";
 
     public QPMTemplatePicValueRenderer(Map<String, Object> mParam) {
@@ -37,15 +36,11 @@ public class QPMTemplatePicValueRenderer extends BaseTemplateRenderer {
         TextView valueView = mView.findViewById(R.id.tv_value);
 
         Object picId = mParam.get(PARAM_PIC_ID);
-        Object picUrl = mParam.get(PARAM_PIC_URL);
         Object value = mParam.get(PARAM_VALUE);
 
         if (picId != null && picId instanceof Integer) {
             ImageLoadUtil.load(QPMManager.getInstance().getContext(), keyView, (Integer) picId);
         }
-//        if (picUrl != null) {
-//            ImageLoadUtil.load(QPMManager.getInstance().getContext(), keyView, picUrl.toString());
-//        }
         if (value != null) {
             valueView.setText(value.toString());
         }
