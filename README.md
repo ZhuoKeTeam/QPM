@@ -72,7 +72,7 @@ QPMManager.getInstance().floatViewHide();
 
 5. WebView 的 H5 需要单独设置。
 6. 本组件最好在 debug 模式下开启, 正式版本也可以带上，但是需要设置一个彩蛋开关，打开开关后方可使用。
-
+7. 另有两篇文档 [添加新监控项的步骤.md](https://github.com/ZhuoKeTeam/QPM/blob/master/添加新监控项的步骤.md) 和 [添加OKHTTP网络监控.md](https://github.com/ZhuoKeTeam/QPM/blob/master/添加OKHTTP网络监控.md)
 
 # 备注
 本开源项目于2018年12月24日（平安夜）发布，文档等资料待进一步添加，莫着急。如果有好的想法建议直接 issues，或者加微信：gdky005。
