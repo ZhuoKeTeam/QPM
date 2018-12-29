@@ -18,7 +18,9 @@ import com.zk.qpm.manager.QPMCallBackManager;
 
 import java.util.List;
 
-
+/**
+ * 精简模式
+ */
 public class QPMFloatViewSimpleComponent extends QPMFloatViewBaseComponent {
 
     private LinearLayout containerLayout;

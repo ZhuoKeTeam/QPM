@@ -26,10 +26,11 @@ public class QPMGetAppInfoRenderer extends BaseRenderer {
     protected void renderer(View mView) {
         TextView keyView = mView.findViewById(R.id.tv_key);
         TextView valueView = mView.findViewById(R.id.tv_value);
-        keyView.setText(R.string.jm_gt_floatview_package);
+
         QPMRAnalysisResult analysisResult = QPMRAnalysisManager.getInstance().getJMGTRAnalysisResult();
         String data = analysisResult.appInfo.packageName;
-        if (!TextUtils.isEmpty(data)) {
+        if (!TextUtils.isEmpty(data) && !valueView.getText().toString().equals(data)) {
+            keyView.setText(R.string.jm_gt_floatview_package);
             valueView.setText(data);
         }
     }
