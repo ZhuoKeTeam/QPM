@@ -9,10 +9,12 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewStub;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.zk.qpm.R;
 import com.zk.qpm.adapter.CommonRecyclerAdapter;
 import com.zk.qpm.utils.BasicInfoUtils;
+import com.zk.qpm.utils.ClipboardUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,15 +73,25 @@ public class BasicInfoFunction implements IFunction {
         }
     }
 
-    private void rendererContentItem(View itemView, int position, BasicInfoUtils.InfoItem data) {
+    private void rendererContentItem(View itemView, int position, final BasicInfoUtils.InfoItem data) {
         itemView.setOnClickListener(null);
         TextView keyView = itemView.findViewById(R.id.tv_key);
         TextView valueView = itemView.findViewById(R.id.tv_value);
-        if (!TextUtils.isEmpty(data.getLabel())) {
-            keyView.setText(data.getLabel());
+        String label = data.getLabel();
+        final String content = data.getContent();
+
+        if (!TextUtils.isEmpty(label)) {
+            keyView.setText(label);
         }
-        if (!TextUtils.isEmpty(data.getContent())) {
-            valueView.setText(data.getContent());
+        if (!TextUtils.isEmpty(content)) {
+            valueView.setText(content);
+            valueView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ClipboardUtils.copyText(content);
+                    Toast.makeText(mContext, "已经拷贝：" + content, Toast.LENGTH_SHORT).show();
+                }
+            });
         }
     }
     

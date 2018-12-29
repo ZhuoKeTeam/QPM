@@ -31,6 +31,10 @@
         android:paddingLeft="5dp"
         android:paddingRight="3dp"
         android:textColor="#999999"
-        android:textSize="13sp" />
+        android:textSize="13sp"
+        android:enabled="true"
+        android:textIsSelectable="true"
+        android:focusable="true"
+        android:longClickable="true"/>
 
 </LinearLayout>
