@@ -11,6 +11,17 @@ Quality Performance Monitor ---> QPM
 [QPM Demo](https://raw.githubusercontent.com/ZhuoKeTeam/QPM/master/release/qpm_release_v100.apk
 ): https://raw.githubusercontent.com/ZhuoKeTeam/QPM/master/release/qpm_release_v100.apk
 
+# 文档资料
+1. [QPM 性能监控组件<总>](http://gdky005.com/2019/01/03/QPM-%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7%E7%BB%84%E4%BB%B6-%E6%80%BB/)
+2. [QPM 之简介](http://gdky005.com/2019/01/03/QPM-%E4%B9%8B%E7%AE%80%E4%BB%8B/)
+3. [QPM 之缘起](http://gdky005.com/2019/01/03/QPM-%E4%B9%8B%E7%BC%98%E8%B5%B7/)
+4. [QPM 准备优化前的思考](http://gdky005.com/2019/01/03/QPM-%E5%87%86%E5%A4%87%E4%BC%98%E5%8C%96%E5%89%8D%E7%9A%84%E6%80%9D%E8%80%83/)
+5. [QPM 之悬浮窗助力性能优化](http://gdky005.com/2019/01/03/QPM-%E4%B9%8B%E6%82%AC%E6%B5%AE%E7%AA%97%E5%8A%A9%E5%8A%9B%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/)
+6. [QPM 之悬浮窗设置信息](http://gdky005.com/2019/01/03/QPM-%E4%B9%8B%E6%82%AC%E6%B5%AE%E7%AA%97%E8%AE%BE%E7%BD%AE%E4%BF%A1%E6%81%AF/)
+7. [QPM 之同类 PM 对比](http://gdky005.com/2019/01/03/QPM-%E4%B9%8B%E5%90%8C%E7%B1%BB-PM-%E5%AF%B9%E6%AF%94/)
+8. [添加一个自定义监控数据步骤  添加新监控项的步骤](https://github.com/ZhuoKeTeam/QPM/blob/master/%E6%B7%BB%E5%8A%A0%E6%96%B0%E7%9B%91%E6%8E%A7%E9%A1%B9%E7%9A%84%E6%AD%A5%E9%AA%A4.md)
+9. [添加OKHTTP网络监控](https://github.com/ZhuoKeTeam/QPM/blob/master/%E6%B7%BB%E5%8A%A0OKHTTP%E7%BD%91%E7%BB%9C%E7%9B%91%E6%8E%A7.md)
+
 
 # 下面做一个性能优化组件的简单介绍：
 1. 获取手机常用的基本信息，方便开发和测试快速获取手机基本信息 （是否 root, 版本号，wifi, 硬件信息等等）；
