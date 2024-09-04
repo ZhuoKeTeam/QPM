@@ -9,9 +9,25 @@ android {
         versionCode 10001
         versionName "1.0.1"
     }
+
+    signingConfigs {
+        release {
+            storeFile file('2024-08-30_wq_release_old_key.jks')
+            storePassword 'wq12345678'
+            keyAlias 'wangqing'
+            keyPassword 'wq12345678'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
     buildTypes {
         release {
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
             minifyEnabled false
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
