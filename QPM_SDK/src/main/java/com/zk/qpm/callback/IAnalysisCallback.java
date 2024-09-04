@@ -1,6 +1,7 @@
 package com.zk.qpm.callback;
 
-import android.support.annotation.StringDef;
+
+import androidx.annotation.StringDef;
 
 import com.zk.qpm.QPMRAnalysisResult;
 

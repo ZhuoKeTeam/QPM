@@ -3,7 +3,6 @@ package com.zk.qpm.demo.webview;
 import android.annotation.TargetApi;
 import android.net.Uri;
 import android.os.Build;
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
@@ -69,7 +68,6 @@ public class JMWebViewClient extends WebViewClient {
         }
     }
 
-    @Nullable
     @Override
     public WebResourceResponse shouldInterceptRequest(WebView view, String url) {
 
@@ -86,7 +84,6 @@ public class JMWebViewClient extends WebViewClient {
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    @Nullable
     @Override
     public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
         return shouldInterceptRequest(view, request.getUrl().toString());

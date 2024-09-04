@@ -1,8 +1,9 @@
 package com.zk.qpm.utils;
 
 import android.os.Build;
-import android.support.annotation.StringDef;
 import android.text.TextUtils;
+
+import androidx.annotation.StringDef;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainActivity"
+            android:exported="true"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -19,7 +20,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".WebViewActivity"/>
+        <activity android:name=".WebViewActivity"
+            android:exported="true"/>
     </application>
 
 </manifest>

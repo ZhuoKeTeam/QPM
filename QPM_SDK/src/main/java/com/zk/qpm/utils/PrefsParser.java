@@ -2,8 +2,9 @@ package com.zk.qpm.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.annotation.StringDef;
 import android.text.TextUtils;
+
+import androidx.annotation.StringDef;
 
 import org.xmlpull.v1.XmlPullParserException;
 

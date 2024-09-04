@@ -3,7 +3,6 @@ package com.zk.qpm.utils;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
@@ -11,6 +10,8 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
+
+import androidx.annotation.RequiresApi;
 
 /**
  * 沉浸式修改状态栏工具类(非沉浸式请用StatusBarColorUtils)

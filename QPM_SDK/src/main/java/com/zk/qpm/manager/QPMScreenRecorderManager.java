@@ -11,9 +11,10 @@ import android.media.projection.MediaProjection;
 import android.media.projection.MediaProjectionManager;
 import android.os.Build;
 import android.os.Environment;
-import android.support.annotation.RequiresApi;
 import android.util.DisplayMetrics;
 import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
 
 import com.zk.qpm.QPMConstant;
 import com.zk.qpm.R;
