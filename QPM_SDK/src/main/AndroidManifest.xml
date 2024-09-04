@@ -35,6 +35,7 @@
     <uses-permission android:name="android.permission.READ_LOGS"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
     <uses-permission
         android:name="android.permission.ACCESS_CHECKIN_PROPERTIES"
         tools:ignore="ProtectedPermissions"/>

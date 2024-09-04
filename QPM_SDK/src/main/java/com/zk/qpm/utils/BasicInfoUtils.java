@@ -155,11 +155,15 @@ public class BasicInfoUtils {
         return UNKNOW;
     }
 
-    @SuppressLint("MissingPermission")
     private static String getOCCID() {
-        TelephonyManager tm =
-                (TelephonyManager) Utils.getApp().getSystemService(Context.TELEPHONY_SERVICE);
-        return tm != null ? tm.getSimSerialNumber() : null;
+        try {
+            TelephonyManager tm =
+                    (TelephonyManager) Utils.getApp().getSystemService(Context.TELEPHONY_SERVICE);
+            return tm != null ? tm.getSimSerialNumber() : null;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "";
     }
 
     private static String getScreenSize(Context context) {
