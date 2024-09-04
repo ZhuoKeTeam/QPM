@@ -1,23 +1,23 @@
 package com.zk.qpm.demo;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.os.Process;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+
 import com.zk.qpm.floatview.renderer.QPMTemplateCustomRenderer;
 import com.zk.qpm.manager.QPMManager;
 import com.zk.qpm.manager.QPMRAnalysisManager;
 import com.zk.qpm.utils.PermissionTool;
+
+import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -31,7 +31,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends Activity implements View.OnClickListener {
     private static final String TAG = "QPM";
     protected Context mContext;
 
@@ -51,10 +51,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mContext = this;
 
         QPMManager.getInstance().init(getApplication());
 
-        mContext = this;
         setContentView(getLayoutId());
         initViews();
         initListener();
@@ -215,7 +215,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    @RequiresApi(api = 23)
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         //申请所有权限的回调结果：

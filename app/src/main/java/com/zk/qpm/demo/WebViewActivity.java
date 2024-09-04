@@ -19,7 +19,7 @@ public class WebViewActivity extends Activity {
 
     //    private String url = "https://github.com/Blankj/AndroidUtilCode/blob/master/utilcode/README-CN.md";
 //    private String url = "http://www.zkteam.cc";
-    private String url = "http://www.gdky005.com";
+    private String url = "https://www.baidu.com/";
 //    private String url = "http://www.baidu.com";
 
     private ZKWebView webview;

@@ -22,6 +22,9 @@
             <Button
                 android:id="@+id/gt_float_view_show_btn"
                 style="@style/BtnStyle"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:background="@android:color/holo_red_light"
                 android:text="显示 GT悬浮窗"/>
 
             <Button

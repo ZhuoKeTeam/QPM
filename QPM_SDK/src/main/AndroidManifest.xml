@@ -50,12 +50,14 @@
         <activity
             android:name=".activity.QPMMainMenuActivity"
             android:launchMode="singleTask"
+            android:exported="true"
             android:screenOrientation="portrait"/>
 
         <!--<activity android:taskAffinity="com.jm.jmgt" android:process=":jmGT"-->
         <activity
             android:name=".activity.QPMActivityListActivity"
             android:launchMode="singleTask"
+            android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
 
@@ -63,6 +65,7 @@
         <activity
             android:name=".activity.QPMServiceListActivity"
             android:launchMode="singleTask"
+            android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
 
@@ -70,6 +73,7 @@
         <activity
             android:name=".activity.QPMReceiverListActivity"
             android:launchMode="singleTask"
+            android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
 
@@ -77,6 +81,7 @@
         <activity
             android:name=".activity.QPMProviderListActivity"
             android:launchMode="singleTask"
+            android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
 
@@ -84,6 +89,7 @@
         <activity
             android:name=".activity.QPMManifestInfoActivity"
             android:launchMode="singleTask"
+            android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
 
@@ -91,6 +97,7 @@
         <activity
             android:name=".activity.QPMBasicInfoActivity"
             android:launchMode="singleTask"
+            android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
 
@@ -98,6 +105,7 @@
         <activity
             android:name=".activity.QPMPrefInfoActivity"
             android:launchMode="singleTask"
+            android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
 
@@ -105,6 +113,7 @@
         <activity
             android:name=".activity.QPMSwitchActivity"
             android:launchMode="singleTask"
+            android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
 
@@ -112,11 +121,14 @@
         <activity
             android:name=".activity.QPMNetworkAPIActivity"
             android:launchMode="singleTask"
+            android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
 
-        <activity android:name=".activity.QPMScreenRecorderActivity"/>
+        <activity android:name=".activity.QPMScreenRecorderActivity"
+            android:exported="true"/>
 
-        <service android:name=".plugin.QPMPluginService"/>
+        <service android:name=".plugin.QPMPluginService"
+            android:exported="true"/>
     </application>
 </manifest>

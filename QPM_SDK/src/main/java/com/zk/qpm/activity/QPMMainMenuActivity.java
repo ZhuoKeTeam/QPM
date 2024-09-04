@@ -4,8 +4,9 @@ package com.zk.qpm.activity;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
 import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
 
 import com.zk.qpm.R;
 import com.zk.qpm.function.MainMenuFunction;
