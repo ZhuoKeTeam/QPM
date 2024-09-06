@@ -80,6 +80,13 @@ public class MainMenuFunction implements IFunction {
                 mContext.startActivity(new Intent(mContext, QPMNetworkAPIActivity.class));
             }
         });
+
+//        layout.findViewById(R.id.btn_123).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                throw new RuntimeException("Test Crash");
+//            }
+//        });
     }
 
     @Override

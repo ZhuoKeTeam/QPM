@@ -67,4 +67,15 @@
         android:textColor="#333333"
         android:textSize="16sp" />
 
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_123"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:background="@drawable/jm_gt_selector_btn"-->
+<!--        android:text="test123"-->
+<!--        android:textColor="#333333"-->
+<!--        android:textSize="16sp" />-->
+
 </LinearLayout>

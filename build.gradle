@@ -26,7 +26,9 @@ buildscript {
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
 
-        classpath 'com.google.gms:google-services:4.3.3'    }
+        classpath 'com.google.gms:google-services:4.3.3'
+        classpath 'com.google.firebase.crashlytics:com.google.firebase.crashlytics.gradle.plugin:2.9.9'
+    }
 }
 
 allprojects {
