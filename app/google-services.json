@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "600017886610",
+    "project_id": "gdky005-180403",
+    "storage_bucket": "gdky005-180403.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600017886610:android:0379a9d40e54a898ad754b",
+        "android_client_info": {
+          "package_name": "com.zk.qpm.demo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuK-P4kRm2u2RhsA2k9_5gvGx6IyILkEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
