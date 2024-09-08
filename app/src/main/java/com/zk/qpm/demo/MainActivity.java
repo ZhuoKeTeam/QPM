@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.zk.qpm.activity.QPMMainMenuActivity;
 import com.zk.qpm.floatview.renderer.QPMTemplateCustomRenderer;
 import com.zk.qpm.manager.QPMManager;
 import com.zk.qpm.utils.PermissionTool;
@@ -56,8 +55,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         initViews();
         initListener();
         initData();
-
-        startActivity(new Intent(mContext, QPMMainMenuActivity.class));
     }
 
     protected int getLayoutId() {

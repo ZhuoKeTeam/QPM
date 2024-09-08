@@ -25,5 +25,8 @@ public class NewMainActivity extends QPMMainMenuActivity {
                 startActivity(intent);
             }
         });
+
+        findViewById(com.zk.qpm.R.id.btn_custom_layer_view).setOnClickListener(v ->
+                startActivity(new Intent(NewMainActivity.this, MainActivity.class)));
     }
 }
