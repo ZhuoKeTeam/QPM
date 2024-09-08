@@ -1,81 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/jm_gt_shape_activity_content"
-    android:orientation="vertical"
-    android:paddingLeft="15dp"
-    android:paddingRight="15dp"
-    android:paddingTop="25dp">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_switch_floatview"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/jm_gt_selector_btn"
-        android:text="@string/jm_gt_switch_floatview"
-        android:textColor="#333333"
-        android:textSize="16sp" />
+        android:layout_height="match_parent"
+        android:background="@drawable/jm_gt_shape_activity_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="25dp">
 
-    <Button
-        android:id="@+id/btn_phone_basic_info"
+        <Button
+            android:id="@+id/btn_switch_floatview"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/jm_gt_selector_btn"
+            android:text="@string/jm_gt_switch_floatview"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_phone_basic_info"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/jm_gt_selector_btn"
+            android:text="@string/jm_gt_phone_basic_info"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_manifest"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/jm_gt_selector_btn"
+            android:text="@string/jm_gt_manifest_info"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_pref_info"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/jm_gt_selector_btn"
+            android:text="@string/jm_gt_pref_info"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_switch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/jm_gt_selector_btn"
+            android:text="@string/jm_gt_floatview_switch"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_network_api"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/jm_gt_selector_btn"
+            android:text="@string/jm_gt_network_api"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_rules"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/jm_gt_selector_btn"
-        android:text="@string/jm_gt_phone_basic_info"
-        android:textColor="#333333"
-        android:textSize="16sp" />
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:text="©隐私协议"/>
 
-    <Button
-        android:id="@+id/btn_manifest"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/jm_gt_selector_btn"
-        android:text="@string/jm_gt_manifest_info"
-        android:textColor="#333333"
-        android:textSize="16sp" />
-
-    <Button
-        android:id="@+id/btn_pref_info"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/jm_gt_selector_btn"
-        android:text="@string/jm_gt_pref_info"
-        android:textColor="#333333"
-        android:textSize="16sp" />
-
-    <Button
-        android:id="@+id/btn_switch"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/jm_gt_selector_btn"
-        android:text="@string/jm_gt_floatview_switch"
-        android:textColor="#333333"
-        android:textSize="16sp" />
-
-    <Button
-        android:id="@+id/btn_network_api"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/jm_gt_selector_btn"
-        android:text="@string/jm_gt_network_api"
-        android:textColor="#333333"
-        android:textSize="16sp" />
-
-
-<!--    <Button-->
-<!--        android:id="@+id/btn_123"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:background="@drawable/jm_gt_selector_btn"-->
-<!--        android:text="test123"-->
-<!--        android:textColor="#333333"-->
-<!--        android:textSize="16sp" />-->
-
-</LinearLayout>
+</RelativeLayout>

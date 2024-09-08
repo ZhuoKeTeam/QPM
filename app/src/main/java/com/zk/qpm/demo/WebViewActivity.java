@@ -4,10 +4,12 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.zk.qpm.demo.webview.JMJSObject;
 import com.zk.qpm.demo.webview.JMWebChromeClient;
@@ -22,6 +24,8 @@ public class WebViewActivity extends Activity {
     private String url = "https://www.baidu.com/";
 //    private String url = "http://www.baidu.com";
 
+    public static final String TAG_WEB_URL = "tag_web_url";
+
     private ZKWebView webview;
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -32,6 +36,13 @@ public class WebViewActivity extends Activity {
 
         Button showDialog = (Button) findViewById(R.id.showDialog);
         Button reloadBtn = (Button) findViewById(R.id.reloadBtn);
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.ll);
+        linearLayout.setVisibility(View.GONE);
+
+        String newUrl = getIntent().getStringExtra(TAG_WEB_URL);
+        if (!TextUtils.isEmpty(newUrl)) {
+            url = newUrl;
+        }
 
 
         reloadBtn.setOnClickListener(new View.OnClickListener() {
