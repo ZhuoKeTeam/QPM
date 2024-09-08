@@ -11,23 +11,19 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-
 import com.zk.qpm.activity.QPMMainMenuActivity;
 import com.zk.qpm.floatview.renderer.QPMTemplateCustomRenderer;
 import com.zk.qpm.manager.QPMManager;
-import com.zk.qpm.manager.QPMRAnalysisManager;
 import com.zk.qpm.utils.PermissionTool;
 
 import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
-import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
 import okhttp3.Call;
 import okhttp3.Callback;
-import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -223,8 +219,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         if (requestCode == PermissionTool.APPLY_PERMISSIONS) {
             for (int i = 0; i < permissions.length; i++) {
                 if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {//如果有权限被拒绝
-                    Toast.makeText(this, "对不起，您未给予相应的权限，程序将退出。", Toast.LENGTH_SHORT).show();
-                    finish();
+//                    Toast.makeText(this, "对不起，您未给予相应的权限，程序将退出。", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "请全部赋予权限，否则部分功能可能无法使用。", Toast.LENGTH_SHORT).show();
+//                    finish();
                     return;
                 }
             }

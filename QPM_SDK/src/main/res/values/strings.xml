@@ -30,7 +30,7 @@
     <string name="jm_gt_receiver_list">Receiver列表</string>
     <string name="jm_gt_provider_list">Provider列表</string>
     <string name="jm_gt_basic_info">基础信息</string>
-    <string name="jm_gt_without_permission">对不起，您未给予相应的权限，程序将退出。</string>
+    <string name="jm_gt_without_permission">请全部赋予权限，否则部分功能可能无法使用。</string>
     <string name="jm_gt_lowsm_stacktrace">查看卡顿栈日志</string>
     <string name="jm_gt_lowsm_stack">卡顿栈日志</string>
     <string name="jm_gt_pref_info">SharedPreferences信息面板</string>

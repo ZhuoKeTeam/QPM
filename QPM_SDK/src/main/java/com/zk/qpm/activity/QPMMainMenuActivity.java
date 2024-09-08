@@ -11,6 +11,7 @@ import androidx.annotation.RequiresApi;
 import com.zk.qpm.R;
 import com.zk.qpm.function.MainMenuFunction;
 import com.zk.qpm.function.TitleFunction;
+import com.zk.qpm.manager.QPMManager;
 import com.zk.qpm.utils.PermissionTool;
 
 public class QPMMainMenuActivity extends QPMFunctionBaseActivity {
@@ -29,6 +30,7 @@ public class QPMMainMenuActivity extends QPMFunctionBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        QPMManager.getInstance().init(this.getApplication());
         // 请求权限
         requestPermission();
     }
@@ -51,7 +53,6 @@ public class QPMMainMenuActivity extends QPMFunctionBaseActivity {
             for (int i = 0; i < permissions.length; i++) {
                 if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {//如果有权限被拒绝
                     Toast.makeText(this, R.string.jm_gt_without_permission, Toast.LENGTH_SHORT).show();
-                    finish();
                     return;
                 }
             }
