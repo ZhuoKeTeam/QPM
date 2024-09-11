@@ -64,7 +64,7 @@ public class WebViewActivity extends Activity {
 //                        webView.loadUrl("javascript:modifyA('" + content + "');");
 //                        webView.loadUrl("javascript:modifyNumber('" + mPhoneNumber + "');");
 
-                        webview.loadUrl("javascript:(alert(\"hello\"));");
+//                        webview.loadUrl("javascript:(alert(\"hello\"));");
 //                        webview.loadUrl("javascript:(console.log(\"WangQing_888\"));");
                     }
                 });
@@ -76,12 +76,12 @@ public class WebViewActivity extends Activity {
 
 
         WebSettings webSettings = webview.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
+//        webSettings.setJavaScriptEnabled(true);
+//        webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
         webSettings.setAllowFileAccess(true);// 设置允许访问文件数据
         webSettings.setSupportZoom(true);
         webSettings.setBuiltInZoomControls(true);
-        webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
+//        webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
         webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         webSettings.setDomStorageEnabled(true);
         webSettings.setDatabaseEnabled(true);
