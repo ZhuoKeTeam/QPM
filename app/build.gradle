@@ -56,3 +56,65 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-crashlytics'
 }
+
+
+
+// 在build.gradle文件的最后添加
+tasks.register('renameAndMoveApk') {
+    def versionCode = android.defaultConfig.versionCode
+    def versionName = android.defaultConfig.versionName
+    def apkPath = "${buildDir}/outputs/apk/release/app-release.apk"
+    def apkReleasePath = "${projectDir}/release/app-release.apk"
+
+    def outputDir = "${projectDir}/release"
+    def targetApkPath = "${outputDir}/${project.name}-${versionName}-${versionCode}.apk"
+    doLast {
+        file(outputDir).mkdirs()
+
+        println("$apkPath=" + file(apkPath).exists())
+        println("$apkReleasePath=" + file(apkReleasePath).exists())
+        println("$outputDir=" + file(outputDir).exists())
+        println("$targetApkPath=" + file(targetApkPath).exists())
+
+        if (!file(apkPath).exists()) {
+            apkPath = apkReleasePath
+        }
+
+        exec {
+            commandLine 'mv', apkPath, targetApkPath
+        }
+    }
+}
+tasks.register('renameAndMoveAab') {
+    def versionCode = android.defaultConfig.versionCode
+    def versionName = android.defaultConfig.versionName
+    def outputDir = "${projectDir}/release"
+    def aabPath = "${projectDir}/release/app-release.aab"
+    def aabReleasePath = "${buildDir}/outputs/bundle/release/app-release.aab"
+    def targetAabPath = "${outputDir}/${project.name}-${versionName}-${versionCode}.aab"
+    doLast {
+        file(outputDir).mkdirs()
+
+        println("$aabPath=" + file(aabPath).exists())
+        println("$aabReleasePath=" + file(aabReleasePath).exists())
+        println("$outputDir=" + file(outputDir).exists())
+        println("$targetAabPath=" + file(targetAabPath).exists())
+
+        if (!file(aabPath).exists()) {
+            aabPath = aabReleasePath
+        }
+
+        exec {
+            commandLine 'mv', aabPath, targetAabPath
+        }
+    }
+}
+tasks.configureEach { task ->
+    if (task.name == 'assembleRelease') {
+        task.finalizedBy renameAndMoveApk
+    }
+
+    if (task.name == 'bundleRelease') {
+        task.finalizedBy renameAndMoveAab
+    }
+}
