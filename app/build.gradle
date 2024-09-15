@@ -67,21 +67,21 @@ tasks.register('renameAndMoveApk') {
     def apkReleasePath = "${projectDir}/release/app-release.apk"
 
     def outputDir = "${projectDir}/release"
-    def targetApkPath = "${outputDir}/${project.name}-${versionName}-${versionCode}.apk"
+    def targetPath = "${outputDir}/${rootProject.name}-Release-${versionName}-${versionCode}.apk"
     doLast {
         file(outputDir).mkdirs()
 
         println("$apkPath=" + file(apkPath).exists())
         println("$apkReleasePath=" + file(apkReleasePath).exists())
         println("$outputDir=" + file(outputDir).exists())
-        println("$targetApkPath=" + file(targetApkPath).exists())
+        println("$targetPath=" + file(targetPath).exists())
 
         if (!file(apkPath).exists()) {
             apkPath = apkReleasePath
         }
 
         exec {
-            commandLine 'mv', apkPath, targetApkPath
+            commandLine 'mv', apkPath, targetPath
         }
     }
 }
@@ -91,21 +91,21 @@ tasks.register('renameAndMoveAab') {
     def outputDir = "${projectDir}/release"
     def aabPath = "${projectDir}/release/app-release.aab"
     def aabReleasePath = "${buildDir}/outputs/bundle/release/app-release.aab"
-    def targetAabPath = "${outputDir}/${project.name}-${versionName}-${versionCode}.aab"
+    def targetPath = "${outputDir}/${rootProject.name}-Release-${versionName}-${versionCode}.aab"
     doLast {
         file(outputDir).mkdirs()
 
         println("$aabPath=" + file(aabPath).exists())
         println("$aabReleasePath=" + file(aabReleasePath).exists())
         println("$outputDir=" + file(outputDir).exists())
-        println("$targetAabPath=" + file(targetAabPath).exists())
+        println("$targetPath=" + file(targetPath).exists())
 
         if (!file(aabPath).exists()) {
             aabPath = aabReleasePath
         }
 
         exec {
-            commandLine 'mv', aabPath, targetAabPath
+            commandLine 'mv', aabPath, targetPath
         }
     }
 }
