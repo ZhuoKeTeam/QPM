@@ -11,10 +11,9 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-import com.zk.qpm.demo.webview.JMJSObject;
 import com.zk.qpm.demo.webview.JMWebChromeClient;
-import com.zk.qpm.demo.webview.ZKWebView;
 import com.zk.qpm.demo.webview.JMWebViewClient;
+import com.zk.qpm.demo.webview.ZKWebView;
 
 
 public class WebViewActivity extends Activity {
@@ -76,8 +75,8 @@ public class WebViewActivity extends Activity {
 
 
         WebSettings webSettings = webview.getSettings();
-//        webSettings.setJavaScriptEnabled(true);
-//        webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
+        webSettings.setJavaScriptEnabled(true);
+        webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
         webSettings.setAllowFileAccess(true);// 设置允许访问文件数据
         webSettings.setSupportZoom(true);
         webSettings.setBuiltInZoomControls(true);
@@ -94,7 +93,7 @@ public class WebViewActivity extends Activity {
         webview.setWebChromeClient(new JMWebChromeClient());
 
 
-        webview.addJavascriptInterface(new JMJSObject(), "myObj");
+//        webview.addJavascriptInterface(new JMJSObject(), "myObj");
 
 //        String url = "http://www.ifanr.com/";
         webview.loadUrl(url);
