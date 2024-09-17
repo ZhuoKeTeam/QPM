@@ -3,7 +3,6 @@ package com.zk.qpm.executor;
 import android.content.Context;
 
 import com.blankj.utilcode.util.AppUtils;
-import com.zk.qpm.BuildConfig;
 import com.zk.qpm.QPMException;
 import com.zk.qpm.analysis.QPMAppAnalysis;
 import com.zk.qpm.floatview.QPMFloatViewType;

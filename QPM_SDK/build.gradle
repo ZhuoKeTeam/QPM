@@ -5,6 +5,10 @@ def ARTIFACT_ID = 'qpm'
 def GROUP_ID = 'com.zk.qpm'
 
 android {
+
+    namespace 'com.zk.qpm'
+
+
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
 
@@ -27,7 +31,6 @@ android {
         checkReleaseBuilds false
         abortOnError false
     }
-
 }
 
 dependencies {

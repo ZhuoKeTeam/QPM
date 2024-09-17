@@ -3,7 +3,9 @@ apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 
 android {
+    namespace 'com.zk.qpm.demo'
     compileSdk 34
+
     defaultConfig {
         applicationId "com.zk.qpm.demo"
         minSdkVersion 21
@@ -52,7 +54,7 @@ dependencies {
     implementation project(':QPM_SDK')
 //    implementation "com.github.ZhuoKeTeam:QPM:1.0.4"
 
-    implementation platform('com.google.firebase:firebase-bom:31.2.2')
+    implementation platform('com.google.firebase:firebase-bom:33.3.0')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-crashlytics'
 }
