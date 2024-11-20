@@ -11,6 +11,49 @@ ext {
 
 buildscript {
     repositories {
+        google()
+        mavenCentral()
+
+        maven { url 'https://android-sdk.is.com/'}
+        maven { url 'https://artifacts.applovin.com/android' }
+        maven { url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" }
+        maven { url "https://s3.amazonaws.com/smaato-sdk-releases/" }
+
+        // pangle
+        maven { url "https://artifact.bytedance.com/repository/pangle" }
+        //Verve
+        maven { url "https://verve.jfrog.io/artifactory/verve-gradle-release" }
+        //PubMatic's
+        maven {
+            url 'https://repo.pubmatic.com/artifactory/public-repos'
+        }
+        //ironsource
+        maven { url 'https://android-sdk.is.com/'}
+        maven { url 'https://mvnrepository.com/'}
+
+        //mintegral
+        maven { url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" }
+        maven {url "https://github.com/reklamupdev/reklamup-admob-adapter/raw/main/maven2" }
+        //Chartboost
+        maven { url  "https://cboost.jfrog.io/artifactory/chartboost-ads/" }
+        //ogury
+        maven { url = uri("https://maven.ogury.co") }
+        //bidmachine
+        maven { url "https://artifactory.bidmachine.io/bidmachine" }
+        //vungle
+        maven {
+            url "https://jitpack.io"
+        }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven {
+            url 'https://packages.aliyun.com/6639f75d4977ded33af8fb60/maven/repo-hmcxt'
+            credentials {
+                username = "664301ef8c77b66c8ccd408f"
+                password = "m3O=stJI_Ht)"
+            }
+        }
+        jcenter()
+
         jcenter()
         google()
         mavenLocal()
@@ -28,11 +71,57 @@ buildscript {
 
         classpath 'com.google.gms:google-services:4.3.3'
         classpath 'com.google.firebase.crashlytics:com.google.firebase.crashlytics.gradle.plugin:2.9.9'
+
+        classpath 'io.github.didi.dokit:dokitx-plugin:3.5.0'
     }
 }
 
 allprojects {
     repositories {
+        google()
+        mavenCentral()
+
+        maven { url 'https://android-sdk.is.com/'}
+        maven { url 'https://artifacts.applovin.com/android' }
+        maven { url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" }
+        maven { url "https://s3.amazonaws.com/smaato-sdk-releases/" }
+
+        // pangle
+        maven { url "https://artifact.bytedance.com/repository/pangle" }
+        //Verve
+        maven { url "https://verve.jfrog.io/artifactory/verve-gradle-release" }
+        //PubMatic's
+        maven {
+            url 'https://repo.pubmatic.com/artifactory/public-repos'
+        }
+        //ironsource
+        maven { url 'https://android-sdk.is.com/'}
+        maven { url 'https://mvnrepository.com/'}
+
+        //mintegral
+        maven { url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" }
+        maven {url "https://github.com/reklamupdev/reklamup-admob-adapter/raw/main/maven2" }
+        //Chartboost
+        maven { url  "https://cboost.jfrog.io/artifactory/chartboost-ads/" }
+        //ogury
+        maven { url = uri("https://maven.ogury.co") }
+        //bidmachine
+        maven { url "https://artifactory.bidmachine.io/bidmachine" }
+        //vungle
+        maven {
+            url "https://jitpack.io"
+        }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven {
+            url 'https://packages.aliyun.com/6639f75d4977ded33af8fb60/maven/repo-hmcxt'
+            credentials {
+                username = "664301ef8c77b66c8ccd408f"
+                password = "m3O=stJI_Ht)"
+            }
+        }
+        jcenter()
+
+
         jcenter()
         google()
         mavenLocal()

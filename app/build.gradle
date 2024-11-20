@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.didi.dokit'
+
 
 android {
     compileSdkVersion 34
@@ -39,6 +41,36 @@ android {
     }
 }
 
+
+dokitExt {
+    //通用设置
+    comm {
+        //地图经纬度开关
+        gpsSwitch true
+        //网络开关
+        networkSwitch true
+        //大图开关
+        bigImgSwitch true
+        //webView js 抓包
+        webViewSwitch true
+    }
+
+    slowMethod {
+        //调用栈模式配置 对应gradle.properties中DOKIT_METHOD_STRATEGY=0
+        stackMethod {
+            //默认值为 5ms 小于该值的函数在调用栈中不显示
+            thresholdTime 10
+        }
+        //普通模式配置 对应gradle.properties中DOKIT_METHOD_STRATEGY=1
+        normalMethod {
+            //默认值为 500ms 小于该值的函数在运行时不会在控制台中被打印
+            thresholdTime 500
+            packageNames = ["org.cocos2dx.javascript"]
+        }
+    }
+}
+
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 //    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
@@ -55,4 +87,9 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:31.2.2')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-crashlytics'
+
+
+    debugImplementation "io.github.didi.dokit:dokitx:3.5.0"
+//    releaseImplementation "io.github.didi.dokit:dokitx-no-op:3.5.0"
+//    releaseLogImplementation "io.github.didi.dokit:dokitx:3.5.0"
 }
