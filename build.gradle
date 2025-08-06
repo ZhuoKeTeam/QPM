@@ -2,11 +2,11 @@ import javax.tools.JavaCompiler
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 ext {
-    compileSdkVersion = 34
+    compileSdkVersion = 35
 //    buildToolsVersion = '34.0.0'
     buildToolsVersion = '30.0.2'
     minSdkVersion = 21  // 之前是21，2018.9.29 兼容了5.0以下的手机，但我只有4.4的手机所以暂时修改为19，后续有更低的手机版本再考虑是否降低,
-    targetSdkVersion = 34
+    targetSdkVersion = 35
 }
 
 buildscript {
