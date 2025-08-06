@@ -20,7 +20,7 @@ buildscript {
     dependencies {
         // 要求本地 gradle 构建工具 必须大于 4.4 版本，本组件使用的是：gradle-4.10.1-all
 //        classpath 'com.android.tools.build:gradle:4.2.2'
-        classpath 'com.android.tools.build:gradle:8.6.0-alpha03'
+        classpath 'com.android.tools.build:gradle:8.6.0-alpha08'
 
 
         // NOTE: Do not place your application dependencies here; they belong
