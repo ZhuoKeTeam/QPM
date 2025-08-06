@@ -10,8 +10,8 @@ android {
         applicationId "com.zk.qpm.demo"
         minSdkVersion 21
         targetSdkVersion 35
-        versionCode 10010
-        versionName "1.0.10"
+        versionCode 10011
+        versionName "1.0.11"
     }
 
     signingConfigs {
@@ -90,10 +90,11 @@ tasks.register('renameAndMoveApk') {
 tasks.register('renameAndMoveAab') {
     def versionCode = android.defaultConfig.versionCode
     def versionName = android.defaultConfig.versionName
+    def applicationId = android.defaultConfig.applicationId
     def outputDir = "${projectDir}/release"
     def aabPath = "${projectDir}/release/app-release.aab"
     def aabReleasePath = "${buildDir}/outputs/bundle/release/app-release.aab"
-    def targetPath = "${outputDir}/${rootProject.name}-Release-${versionName}-${versionCode}.aab"
+    def targetPath = "${outputDir}/${rootProject.name}-${applicationId}-Release-${versionName}-${versionCode}.aab"
     doLast {
         file(outputDir).mkdirs()
 

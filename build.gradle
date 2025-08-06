@@ -18,10 +18,10 @@ buildscript {
         
     }
     dependencies {
-        // 要求本地 gradle 构建工具 必须大于 4.4 版本，本组件使用的是：gradle-4.10.1-all
-//        classpath 'com.android.tools.build:gradle:4.2.2'
-        classpath 'com.android.tools.build:gradle:8.6.0-alpha08'
-
+        // 本机 Android Studio 的版本是：Android Studio Koala Feature Drop | 2024.1.2 Canary 8，
+        // 所以最高的 com.android.tools.build:gradle 版本是 8.6.0-alpha08，必须在这个以内，选择一个较为稳定的版本：8.5.2。
+        // 这里固定下来，不升级 AS 就不要修改该版本。
+        classpath 'com.android.tools.build:gradle:8.5.2'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
